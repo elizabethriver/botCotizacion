@@ -1,0 +1,116 @@
+{
+    "id": "formrevisarcotizacion",
+    "schemaVersion": "1.1.0",
+    "name": "FormRevisarCotizacion",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "datos_",
+            "type": "section",
+            "title": "Datos del cliente",
+            "content": [
+                {
+                    "id": "nombre_del_solicitante",
+                    "type": "string",
+                    "label": "Nombre del solicitante",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.nombreSolicitante}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "direccion_del_solicitante",
+                    "type": "string",
+                    "label": "Direccion del solicitante",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.direccionSolicitante}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "edad_del_solicitante",
+                    "type": "string",
+                    "label": "Edad del Solicitante",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.edadSolicitante}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "correo",
+                    "type": "string",
+                    "label": "Correo",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.correoSolicitante}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "datos_del_auto",
+            "type": "section",
+            "title": "Datos del auto",
+            "content": [
+                {
+                    "id": "placa_del_auto",
+                    "type": "string",
+                    "label": "Placa del auto",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.placaAuto}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "marca_del_auto",
+                    "type": "string",
+                    "label": "Marca del auto",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.marcaAuto}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "a_o_del_auto",
+                    "type": "string",
+                    "label": "Año del auto",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.yearAuto}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "numero_de_puertas",
+                    "type": "string",
+                    "label": "Numero de puertas",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.numeroDePuertas}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "solicitud_aprobada",
+            "text": "Solicitud aprobada",
+            "decisionType": "positive"
+        },
+        {
+            "id": "solicitud_desaprobada",
+            "text": "Solicitud desaprobada",
+            "decisionType": "negative"
+        }
+    ]
+}
