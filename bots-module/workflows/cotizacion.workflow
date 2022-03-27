@@ -29,7 +29,7 @@
 					"name": "Se aprueba?"
 				},
 				"18b57922-8643-48b6-888d-0301450c75b4": {
-					"name": "Correo de aprobacion"
+					"name": "Correo de aprobacion manual"
 				},
 				"41a88a24-5751-46ed-b8e4-fcf343928fef": {
 					"name": "Correo de rechazo"
@@ -118,7 +118,7 @@
 		"18b57922-8643-48b6-888d-0301450c75b4": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
 			"id": "mailtask2",
-			"name": "Correo de aprobacion",
+			"name": "Correo de aprobacion manual",
 			"mailDefinitionRef": "ab6b80c4-655f-4340-99d3-b54869a9d84f"
 		},
 		"41a88a24-5751-46ed-b8e4-fcf343928fef": {
@@ -239,7 +239,7 @@
 		},
 		"6f9f06af-33b4-4494-9c06-a1e7ce201140": {
 			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "439.5,192 773.25,192 773.25,142.625 1123.5,142.625",
+			"points": "439.5,192 439.5,162 773.25,162 773.25,142.625 1123.5,142.625",
 			"sourceSymbol": "ea2abb4c-9021-4829-9090-86a988f1e37e",
 			"targetSymbol": "53e54950-7757-4161-82c9-afa7e86cff2c",
 			"object": "d2c33794-6176-45b3-bfbe-b4c672cba6fb"
@@ -350,7 +350,7 @@
 		"3d980da8-12b0-4540-ac11-b0439f2e7778": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition1",
-			"to": "grupo3SAP@outlook.com",
+			"to": "elizabethriver@gmail.com",
 			"subject": "Respuesta a la solicitud de cotizacion",
 			"text": "Muchas gracias ${context.cotizacion.nombreSolicitante}\n\nTu solicitud ha sido aprobado automaticamente\n",
 			"id": "maildefinition1"
@@ -358,16 +358,16 @@
 		"ab6b80c4-655f-4340-99d3-b54869a9d84f": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition2",
-			"to": "grupo3SAP@outlook.com",
-			"subject": "Respuesta a la solicitud de cotizacion",
-			"text": "Muchas gracias ${context.cotizacion.nombreSolicitante}\n\nTu solicitud ha sido aprobado automaticamente",
+			"to": "elizabethriver@gmail.com",
+			"subject": "Respuesta a la solicitud de cotizacion Felicitaciones!",
+			"text": "Muchas gracias ${context.cotizacion.nombreSolicitante}\n\nTu solicitud ha sido aprobado por nuestro asesor",
 			"id": "maildefinition2"
 		},
 		"301c5bbf-4819-4a00-8bb5-2304db43b006": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition3",
-			"to": "grupo3SAP@outlook.com",
-			"subject": "Respuesta a la solicitud de cotizacion",
+			"to": "elizabethriver@gmail.com",
+			"subject": "Respuesta a la solicitud de cotizacion ",
 			"text": "Estimado ${context.cotizacion.nombreSolicitante}\nLamentamos comunicarte que tu solicitud ha sido rechazado",
 			"id": "maildefinition3"
 		}
