@@ -1,0 +1,33 @@
+{
+    "id": "validacioncotizacion",
+    "schemaVersion": "1.1.0",
+    "name": "ValidacionCotizacion",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "precio_a_cotizar_",
+            "type": "string",
+            "label": "Precio a cotizar ",
+            "placeholder": "Ingresar precio a cotizar",
+            "readOnly": false,
+            "value": "${context.comentarioPrecio}",
+            "constraints": {
+                "required": true
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "enviar_cotizaci_n",
+            "text": "Enviar cotización",
+            "decisionType": "positive"
+        },
+        {
+            "id": "cotizaci_n_on_hold",
+            "text": "Cotización on hold",
+            "decisionType": ""
+        }
+    ]
+}

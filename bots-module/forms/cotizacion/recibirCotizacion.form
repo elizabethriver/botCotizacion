@@ -1,52 +1,42 @@
 {
-    "id": "formrevisarcotizacion",
+    "id": "recibircotizacion",
     "schemaVersion": "1.1.0",
-    "name": "FormRevisarCotizacion",
+    "name": "recibirCotizacion",
     "revision": "1.0",
     "type": "task",
     "readOnly": false,
     "content": [
         {
-            "id": "datos_",
+            "id": "datos_de_solicitante",
             "type": "section",
-            "title": "Datos del cliente",
+            "title": "Datos de solicitante",
             "content": [
                 {
-                    "id": "nombre_del_solicitante",
+                    "id": "nombre",
                     "type": "string",
-                    "label": "Nombre del solicitante",
+                    "label": "Nombre",
                     "readOnly": false,
-                    "value": "${context.datosDeSolicitante.nombreSolicitante}",
+                    "value": "${context.cotizacion.nombreSolicitante}",
                     "constraints": {
                         "required": false
                     }
                 },
                 {
-                    "id": "direccion_del_solicitante",
+                    "id": "direccion",
                     "type": "string",
-                    "label": "Direccion del solicitante",
+                    "label": "Direccion",
                     "readOnly": false,
-                    "value": "${context.datosDeSolicitante.direccionSolicitante}",
+                    "value": "${context.cotizacion.direccionSolicitante}",
                     "constraints": {
                         "required": false
                     }
                 },
                 {
-                    "id": "edad_del_solicitante",
+                    "id": "edad",
                     "type": "string",
-                    "label": "Edad del Solicitante",
+                    "label": "Edad",
                     "readOnly": false,
-                    "value": "${context.datosDeSolicitante.edadSolicitante}",
-                    "constraints": {
-                        "required": false
-                    }
-                },
-                {
-                    "id": "correo",
-                    "type": "string",
-                    "label": "Correo",
-                    "readOnly": false,
-                    "value": "${context.datosDeSolicitante.correoSolicitante}",
+                    "value": "${context.cotizacion.edadSolicitante}",
                     "constraints": {
                         "required": false
                     }
@@ -54,36 +44,36 @@
             ]
         },
         {
-            "id": "datos_del_auto",
+            "id": "datos_de_auto",
             "type": "section",
-            "title": "Datos del auto",
+            "title": "Datos de auto",
             "content": [
+                {
+                    "id": "marca",
+                    "type": "string",
+                    "label": "Marca",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.marcaAuto}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "year_del_auto",
+                    "type": "string",
+                    "label": "Year del auto",
+                    "readOnly": false,
+                    "value": "${context.cotizacion.yearAuto}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
                 {
                     "id": "placa_del_auto",
                     "type": "string",
                     "label": "Placa del auto",
                     "readOnly": false,
-                    "value": "${context.datosDeSolicitante.placaAuto}",
-                    "constraints": {
-                        "required": false
-                    }
-                },
-                {
-                    "id": "marca_del_auto",
-                    "type": "string",
-                    "label": "Marca del auto",
-                    "readOnly": false,
-                    "value": "${context.datosDeSolicitante.marcaAuto}",
-                    "constraints": {
-                        "required": false
-                    }
-                },
-                {
-                    "id": "a_o_del_auto",
-                    "type": "string",
-                    "label": "Año del auto",
-                    "readOnly": false,
-                    "value": "${context.datosDeSolicitante.yearAuto}",
+                    "value": "${context.cotizacion.placaAuto}",
                     "constraints": {
                         "required": false
                     }
@@ -93,7 +83,24 @@
                     "type": "string",
                     "label": "Numero de puertas",
                     "readOnly": false,
-                    "value": "${context.datosDeSolicitante.numeroDePuertas}",
+                    "value": "${context.cotizacion.numeroDePuertas}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "datos_de_la_recepcion",
+            "type": "section",
+            "title": "Datos de la recepcion",
+            "content": [
+                {
+                    "id": "comentarios",
+                    "type": "string",
+                    "label": "Comentarios",
+                    "readOnly": false,
+                    "value": "${context.datosDeRecepcion.comentarios}",
                     "constraints": {
                         "required": false
                     }
@@ -103,9 +110,14 @@
     ],
     "decisions": [
         {
-            "id": "enviar_solicitud",
-            "text": "Enviar solicitud",
+            "id": "cotizacion_recibida",
+            "text": "Cotizacion recibida",
             "decisionType": "positive"
+        },
+        {
+            "id": "cotizacion_rechazada",
+            "text": "Cotizacion rechazada",
+            "decisionType": "negative"
         }
     ]
 }
