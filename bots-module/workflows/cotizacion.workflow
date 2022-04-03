@@ -17,22 +17,22 @@
 			},
 			"activities": {
 				"91a4642b-46d8-44a6-8a80-d5f2314b1394": {
-					"name": "Revisar cotizacion"
+					"name": "Revisar cotización"
 				},
 				"b3fd6c3a-f41e-481f-8286-4b7da8d00168": {
-					"name": "Requiere revision del agente de seguros?"
+					"name": "Requiere revisión del agente de seguros?"
 				},
 				"18b57922-8643-48b6-888d-0301450c75b4": {
-					"name": "Envio de cotizacion revisada por el agente de seguros"
+					"name": "Envío de cotización revisada por el agente de seguros"
 				},
 				"41a88a24-5751-46ed-b8e4-fcf343928fef": {
-					"name": "Envio de cotizacion automatica "
+					"name": "Envío de cotización automática "
 				},
 				"a5e4847c-8d40-4948-8d2b-8c0114376dd6": {
 					"name": "Regla de precio"
 				},
 				"7b4a2075-c797-4043-9e51-daddac513b8e": {
-					"name": "Revision de cotizacion por el agente de seguros"
+					"name": "Revisión de cotización por el agente de seguros"
 				}
 			},
 			"sequenceFlows": {
@@ -92,24 +92,24 @@
 				"value": "1.0"
 			}],
 			"id": "usertask2",
-			"name": "Revisar cotizacion"
+			"name": "Revisar cotización"
 		},
 		"b3fd6c3a-f41e-481f-8286-4b7da8d00168": {
 			"classDefinition": "com.sap.bpm.wfs.ExclusiveGateway",
 			"id": "exclusivegateway2",
-			"name": "Requiere revision del agente de seguros?",
+			"name": "Requiere revisión del agente de seguros?",
 			"default": "8d3b0f54-1b03-4b4f-a94d-475c8014c184"
 		},
 		"18b57922-8643-48b6-888d-0301450c75b4": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
 			"id": "mailtask2",
-			"name": "Envio de cotizacion revisada por el agente de seguros",
+			"name": "Envío de cotización revisada por el agente de seguros",
 			"mailDefinitionRef": "ab6b80c4-655f-4340-99d3-b54869a9d84f"
 		},
 		"41a88a24-5751-46ed-b8e4-fcf343928fef": {
 			"classDefinition": "com.sap.bpm.wfs.MailTask",
 			"id": "mailtask3",
-			"name": "Envio de cotizacion automatica ",
+			"name": "Envío de cotización automática ",
 			"mailDefinitionRef": "301c5bbf-4819-4a00-8bb5-2304db43b006"
 		},
 		"a5e4847c-8d40-4948-8d2b-8c0114376dd6": {
@@ -135,7 +135,7 @@
 				"value": "1.0"
 			}],
 			"id": "usertask8",
-			"name": "Revision de cotizacion por el agente de seguros"
+			"name": "Revisión de cotización por el agente de seguros"
 		},
 		"b36dd2f7-9e9b-494f-b0c3-0f450257f412": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
@@ -261,7 +261,7 @@
 		},
 		"7187adee-4ca1-48fa-9e47-e62ee87d9d76": {
 			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "336.1800537109375,60.5625 459.6800537109375,60.5625 459.6800537109375,120.5625 612.1800537109375,120.5625",
+			"points": "357.1800537109375,60.5625 459.6800537109375,60.5625 459.6800537109375,120.5625 561.6800537109375,120.5625",
 			"sourceSymbol": "7f609050-5247-4898-a854-16c7e483a240",
 			"targetSymbol": "6ccc0fec-2c31-479d-869a-f6c82bca8eb7",
 			"object": "0bdd05ca-b886-4137-9f96-6771ba0fcfd6"
@@ -348,16 +348,16 @@
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition2",
 			"to": "elizabethriver@gmail.com",
-			"subject": "Respuesta a la solicitud de cotizacion! Felicitaciones!",
-			"text": "Muchas gracias ${context.datosDeSolicitante.nombreSolicitante}\n\nEl precio es ${context.comentarioPrecio}\n\nTu solicitud ha sido aprobado por nuestro asesor",
+			"subject": "Respuesta a la solicitud de cotización",
+			"reference": "/webcontent/cotizacion/solicitudManual.html",
 			"id": "maildefinition2"
 		},
 		"301c5bbf-4819-4a00-8bb5-2304db43b006": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition3",
 			"to": "elizabethriver@gmail.com",
-			"subject": "Respuesta a la solicitud de cotizacion, gracias por escribirnos",
-			"text": "Estimado ${context.datosDeSolicitante.nombreSolicitante}\n\nEl precio es ${context.precio}\n\n",
+			"subject": "Respuesta a la solicitud de cotizacion. Aprobación automática",
+			"reference": "/webcontent/cotizacion/sentCotizacionAutomatica.html",
 			"id": "maildefinition3"
 		}
 	}

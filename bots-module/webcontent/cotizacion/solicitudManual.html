@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body style="margin: 0; padding: 0">
+    <header style="display: flex;
+    flex-direction: row; align-items: center;">
+        <img src="https://i.ibb.co/hffWwdh/Blue-Black-Minimalist-Atthahomes-Studio-Logo.png"
+            alt="Blue-Black-Minimalist-Atthahomes-Studio-Logo" width="200px" />
+    </header>
+    <main style=" display: flex;
+    flex-direction: column;
+    padding: 19px;
+    margin: 13px;">
+        <h2 style=" margin-bottom: 10px;">Respuesta a tu solicitud de cotizacion</strong></h2>
+        <p style="font-size: 16px;">
+            Estimado ${context.datosDeSolicitante.nombreSolicitante}
+            </br>
+            </br>
+            Tenemos buenas noticias!
+            </br>
+            Luego de haber evaluado los datos de tu solicitud de cotizacion por nuestro asesores, hemos <strong
+                style="color: #023374;">aprobado</strong> tu solicitud de cotización!
+            </br>
+            A continuación, te presentamos los datos de tu cotización
+            </br>
+        </p>
+        </br>
+        <table style="width: 600px;">
+            <tbody>
+                <tr>
+                    <td style="width: 60%; background-color: #023374; color: #fff;">Datos del auto</td>
+                    <td style="width: 40%; background-color: #023374; color: #fff;">Valores</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Placa del auto</td>
+                    <td style="width: 40%;">${context.datosDeSolicitante.placaAuto}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Marca del auto</td>
+                    <td style="width: 40%;">${context.datosDeSolicitante.marcaAuto}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60;">Año del auto</td>
+                    <td style="width: 40%;">${context.datosDeSolicitante.yearAuto}</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Número de puertas</td>
+                    <td style="width: 40%;">${context.datosDeSolicitante.direccionSolicitante}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 16px;">
+            El precio de la cotización es <strong style="color: #023374">$ ${context.comentarioPrecio}</strong>
+            </br>
+            </br>
+            Ahora uno de nuestros asesores se comunicara contigo en los proximos minutos para más detalles
+            </br>
+            Saludos cordiales
+        </p>
+
+    </main>
+    <footer style="width: 100%; position: fixed; bottom: 0; background-color: #023374; color: #fff;">
+        <small>@segurosamerica 2022</small>
+    </footer>
+</body>
+
+</html>

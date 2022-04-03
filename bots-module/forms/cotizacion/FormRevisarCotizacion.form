@@ -15,40 +15,44 @@
                     "id": "nombre_del_solicitante",
                     "type": "string",
                     "label": "Nombre del solicitante",
+                    "placeholder": "Ingresa tu nombre",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.nombreSolicitante}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 },
                 {
                     "id": "direccion_del_solicitante",
                     "type": "string",
                     "label": "Direccion del solicitante",
+                    "placeholder": "Ingresa tu dirección",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.direccionSolicitante}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 },
                 {
                     "id": "edad_del_solicitante",
                     "type": "string",
                     "label": "Edad del Solicitante",
+                    "placeholder": "Ingresa tu edad",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.edadSolicitante}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 },
                 {
                     "id": "correo",
                     "type": "string",
                     "label": "Correo",
+                    "placeholder": "Ingresa tu correo",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.correoSolicitante}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 }
             ]
@@ -62,40 +66,44 @@
                     "id": "placa_del_auto",
                     "type": "string",
                     "label": "Placa del auto",
+                    "placeholder": "Ingresa la placa del auto",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.placaAuto}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 },
                 {
                     "id": "marca_del_auto",
                     "type": "string",
                     "label": "Marca del auto",
+                    "placeholder": "Ingresa la marca del auto",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.marcaAuto}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 },
                 {
                     "id": "a_o_del_auto",
                     "type": "string",
                     "label": "Año del auto",
+                    "placeholder": "Ingresa el año del auto",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.yearAuto}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 },
                 {
                     "id": "numero_de_puertas",
                     "type": "string",
                     "label": "Numero de puertas",
+                    "placeholder": "Ingresa el número de puertas",
                     "readOnly": false,
                     "value": "${context.datosDeSolicitante.numeroDePuertas}",
                     "constraints": {
-                        "required": false
+                        "required": true
                     }
                 }
             ]
